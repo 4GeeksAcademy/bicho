@@ -26,9 +26,6 @@ export const Navbar = () => {
 				<Link to="/products">
 					<div className="text-lg text-white font-medium px-3">Productos</div>
 				</Link>
-				<Link to="/food">
-					<div className="text-lg text-white font-medium px-3">Alimentos</div>
-				</Link>
 				</div>
 				</>
 				}				

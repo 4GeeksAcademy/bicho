@@ -15,7 +15,7 @@ export const Home = () => {
 		<div className="bg-muted">
 			<CoverImage/>
 			<div className="font-bold text-3xl text-center text-secondary pt-4">
-				Nuestras sucursales
+				Nuestra ubicación
 			</div>
 			<div className={`my-5 ${isMobile ? "justify-center" : "flex flex-row justify-evenly"}`}>
 				<ScheduleCard 
@@ -25,14 +25,6 @@ export const Home = () => {
 				weekdaysTime="12:00 pm a 8:00 pm"
 				satTime="12:00 pm a 8:00 pm"
 				sunTime="12:00 pm a 8:00 pm"
-				/>
-				<ScheduleCard
-				title="Palenque"
-				location="Playa Carey 1 local 3 esq. Palenque, 77528 Cancún, Q.R."
-				urlLocation="https://maps.app.goo.gl/iWjijk9YfN8moKtH8"
-				weekdaysTime="4:00 pm a 11:00 pm"
-				satTime="4:00 pm a 11:00 pm"
-				sunTime="Cerrado "
 				/>
 			</div>
 			<div className="bg-linear-to-r from-primary to-accent">
@@ -46,43 +38,36 @@ export const Home = () => {
 					day="Lunes"
 					activity="Pokemon"
 					time="7:30 pm"
-					location="Palenque"
 					/>
 					<TournamentCard
 					day="Martes"
 					activity="Lorcana"
 					time="6:00 pm"
-					location="Palenque"
 					/>
 					<TournamentCard
 					day="Miercoles"
 					activity="Pokemon"
 					time="7:30 pm"
-					location="Palenque"
 					/>
 					<TournamentCard
 					day="Jueves"
-					activity="Digimon | Pinta figuras"
-					time="6:30 pm | 4:00 pm"
-					location="Palenque"
+					activity="Digimon "
+					time="6:00 pm "
 					/>
 					<TournamentCard
 					day="Viernes"
 					activity="Pokemon"
 					time="7:30 pm"
-					location="Palenque"
 					/>
 					<TournamentCard
 					day="Sabado"
-					activity="Juegos de mesa"
+					activity="Aprende Lorcana"
 					time="16:00 pm"
-					location="Palenque"
 					/>
 					<TournamentCard
 					day="Domingo"
-					activity="Pokemon"
+					activity="Lorcana"
 					time="4:30 pm"
-					location="Friki Plaza"
 					/>
 				</div>	
 				
