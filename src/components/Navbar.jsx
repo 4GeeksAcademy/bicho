@@ -30,7 +30,7 @@ export const Navbar = () => {
 				</>
 				}				
 				<div>
-					<Link to="/demo">
+					<Link to="/cart">
 						<button className="btn btn-primary">
 							<img className="w-7" src={cartSvg}/>
 						</button>

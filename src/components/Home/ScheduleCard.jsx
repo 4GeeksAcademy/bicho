@@ -5,7 +5,7 @@ export default function ScheduleCard({title, location, urlLocation, weekdaysTime
     const {isMobile, isTablet} = screenSize()
 
     return (
-        <div className={`p-4 m-4 bg-white border border-primary rounded-md ${isMobile ? "max-w-s" : isTablet ? "max-w-xs " : "w-xs"}`}>
+        <div className={`p-4 m-4 bg-white border border-primary rounded-md ${isMobile ? "max-w-s" : isTablet ? "max-w-xs " : "w-s"}`}>
             <div className="text-secondary font-bold text-xl text-center">
                 {title}
             </div>

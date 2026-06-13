@@ -2,6 +2,8 @@ import Carousel from "../components/Carousel"
 import ProductCard from "../components/Products/ProductCard"
 import { screenSize } from "../hooks/screenSize"
 import whatsIcon from "@/assets/icons/whatsIcon.png"
+import products from "@/products.js"
+
 
 export default function Products(){
     const {isMobile, isTablet} = screenSize()
@@ -63,15 +65,21 @@ export default function Products(){
                 </div>
                 }
             </div>
-            <div className={`bg-linear-to-r from-primary to-accent p-3 min-h-[60vh] `}>
-                <div className="text-bold">Conoce nuestros productos imprecindibles </div>
-                <div className={`${isMobile ? " flex flex-col items-center":"flex flex-wrap justify-around"}`}>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
+            <div className={`bg-linear-to-r from-primary to-accent p-3 min-h-[60vh]`}>
+                <div className="font-bold text-warning text-3xl my-3">Conoce nuestros productos imprecindibles </div>
+                
+                <div className={` grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center w-full`}>                 
+                    {products.map((product)=>(
+                        <ProductCard
+                            key={product.id}
+                            product={product}
+                            
+                        />
+                    ))}
+                    
                 </div>
-
             </div>
         </div>
+        
     )
 }
