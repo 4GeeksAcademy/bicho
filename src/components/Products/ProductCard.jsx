@@ -18,7 +18,7 @@ export default function ProductCard({product}){
         <div className={`h-80 border rounded-lg flex flex-col w-full max-w-xs`}>
             <div className="flex-[3] overflow-hidden">
                 <img 
-                src="https://antiquestore.com.mx/wp-content/uploads/2024/07/dragon-shield-matte-card-sleeves-various-colors_1__08186.webp" 
+                src={product.image}
                 alt={product.name}
                 className="w-full h-full  rounded-t-lg "
                 />

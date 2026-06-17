@@ -1,4 +1,5 @@
 
+import CartItems from "../components/cart/CartItems";
 import { useCart } from "../hooks/CartContext";
 
 export const Cart = () => {
@@ -7,61 +8,38 @@ export const Cart = () => {
 
   //Total amount 
   const total = cart.reduce(
-    (acc, item) => acc + item.price * item.quantity,
+    (prev, item) => prev + item.price * item.quantity,
     0
   );
   
   return (
-    <div className="container">
+    <div className="m-4">
       <div className="text-secondary font-bold text-center mt-4">Carrito </div>
+            <div className="flex py-2">        
+                <div className="w-1/4 text-secondary text-center font-medium">producto</div>
+                <div className="w-1/4 text-secondary text-center font-medium">precio</div>
+                <div className="w-1/4 text-secondary text-center font-medium">cantidad</div>
+                <div className="w-1/4 text-secondary text-center font-medium">subtotal</div>
+            </div>
+        <div>
 
-        <div className="flex flex-col items-center">
-
-      {cart.map((item) => (
-        <div key={item.id}>
-          <h4>{item.name}</h4>
-
-          <p>
-            ${item.price} x {item.quantity}
-          </p>
-
-          <button
-            onClick={() =>
-              dispatch({
-                type: "INCREASE_QUANTITY",
-                payload: item.id,
-              })
-            }
-          >
-            +
-          </button>
-
-          <button
-            onClick={() =>
-              dispatch({
-                type: "DECREASE_QUANTITY",
-                payload: item.id,
-              })
-            }
-          >
-            -
-          </button>
-
-          <button
-            onClick={() =>
-              dispatch({
-                type: "REMOVE_FROM_CART",
-                payload: item.id,
-              })
-            }
-          >
-            Eliminar
-          </button>
-        </div>
+      {cart.map((product) => (
+          <CartItems key={product.id} product={product}/>
       ))}
 
-      <h3>Total: ${total}</h3>
+     
     </div>
+     <div className="flex flex-col items-end py-2">
+      <div className="w-1/4 text-center text-secondary font-bold">Total: ${total}</div>
+      <div className="w-1/4 flex justify-center">
+      <button className="bg-secondary text-white p-2 rounded my-2">Comprar</button>
+      </div>
+      <div className="text-primary font-s">
+        (Se redireccionará a whats app)
+      </div>
+      </div>
+
+  
     </div>
   );
 };
