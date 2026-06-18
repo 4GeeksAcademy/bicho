@@ -1,5 +1,6 @@
 
 import CartItems from "../components/cart/CartItems";
+import CheckoutButton from "../components/cart/CheckoutButton";
 import { useCart } from "../hooks/CartContext";
 
 export const Cart = () => {
@@ -14,6 +15,9 @@ export const Cart = () => {
   
   return (
     <div className="m-4">
+      <div className="text-primary text-center font-s bg-warning py-2">
+        Por el momento no contamos con pagos en linea, para continuar con tu compra con gusto te atenderemos por WhatsApp.
+      </div>
       <div className="text-secondary font-bold text-center mt-4">Carrito </div>
             <div className="flex py-2">        
                 <div className="w-1/4 text-secondary text-center font-medium">producto</div>
@@ -32,13 +36,9 @@ export const Cart = () => {
      <div className="flex flex-col items-end py-2">
       <div className="w-1/4 text-center text-secondary font-bold">Total: ${total}</div>
       <div className="w-1/4 flex justify-center">
-      <button className="bg-secondary text-white p-2 rounded my-2">Comprar</button>
-      </div>
-      <div className="text-primary font-s">
-        (Se redireccionará a whats app)
+      <CheckoutButton/>
       </div>
       </div>
-
   
     </div>
   );
