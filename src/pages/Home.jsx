@@ -20,7 +20,7 @@ export const Home = () => {
 			<div className={`my-5 ${isMobile ? "justify-center" : "flex flex-row justify-evenly"}`}>
 				<ScheduleCard 
 				title="Friki Plaza"
-				location="Av. Costa Maya Smz 228 Mz 22 Lote 1, 77516 Cancún, Q.R."
+				location="Av. Costa Maya Smz 228 Mz 22 Lt 1, 77516 Cancún, Q.R."
 				urlLocation="https://maps.app.goo.gl/wTj5gkfzNjQsh3BM7"
 				weekdaysTime="12:00 pm a 8:00 pm"
 				satTime="12:00 pm a 8:00 pm"
@@ -28,8 +28,8 @@ export const Home = () => {
 				/>
 				<ScheduleCard 
 				title="Palenque"
-				location="Av. Costa Maya Smz 228 Mz 22 Lote 1, 77516 Cancún, Q.R."
-				urlLocation="https://maps.app.goo.gl/wTj5gkfzNjQsh3BM7"
+				location="Av las playas, Smz 29 Mz 8 Lote 4, 77508 Cancún, Q.R."
+				urlLocation="https://maps.app.goo.gl/nVqqBaBHGpxrrQsRA?g_st=ia"
 				weekdaysTime="4:00pm a 11:00pm"
 				satTime="4:00pm a 11:00pm"
 				sunTime="cerrado"

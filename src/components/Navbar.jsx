@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { screenSize } from "../hooks/screenSize";
 import bichoLogo from "../assets/img/bichologo.png"
-import cartSvg from "../assets/icons/cart.svg"
 import menuSvg from "../assets/icons/menu.svg"
 import MenuMobile from "./MenuMobile";
+import CartButton from "./Home/CartButton";
 
 export const Navbar = () => {
 
@@ -26,14 +26,15 @@ export const Navbar = () => {
 				<Link to="/products">
 					<div className="text-lg text-white font-medium px-3">Productos</div>
 				</Link>
+				<Link to="/food">
+					<div className="text-lg text-white font-medium px-3">Alimentos</div>
+				</Link>
 				</div>
 				</>
 				}				
 				<div>
 					<Link to="/cart">
-						<button className="btn btn-primary">
-							<img className="w-7" src={cartSvg}/>
-						</button>
+							<CartButton/>
 					</Link>
 				</div>
 			</div>

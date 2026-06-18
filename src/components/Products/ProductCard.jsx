@@ -16,7 +16,7 @@ export default function ProductCard({product}){
     const {isDesktop, isMobile, isLaptop,isTablet} = screenSize()
     return(
         <div className={`h-80 border rounded-lg flex flex-col w-full max-w-xs`}>
-            <div className="flex-[3] overflow-hidden">
+            <div className="max-h-1/2 overflow-hidden">
                 <img 
                 src={product.image}
                 alt={product.name}
@@ -30,7 +30,7 @@ export default function ProductCard({product}){
                 </div>
                 <div className="w-1/4 flex flex-col items-end justify-between">
                     <div className="text-lg text-secondary font-bold">{product.price}</div>
-                    <button onClick={addToCart}>
+                    <button className="transition duration-170 hover:scale-105 active:scale-75" onClick={addToCart}>
                         <img className=" h-12 bg-accent p-2 rounded-full " src={AddCart}/>
                     </button>
                     
