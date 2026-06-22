@@ -23,13 +23,13 @@ export default function ProductCard({product}){
                 className="w-full h-full  rounded-t-lg "
                 />
             </div>
-            <div className=" flex flex-1 rounded-b-lg p-3 bg-linear-to-r from-light to-muted">
-                <div className="w-3/4">
+            <div className=" flex flex-1 rounded-b-lg p-3 bg-linear-to-r from-light to-muted max-h-1/2">
+                <div className="w-3/4 flex flex-col ">
                     <div className="text-primary font-semibold text-lg">{product.name}</div>
                     <div className="text-sm">{product.description} </div>
                 </div>
-                <div className="w-1/4 flex flex-col items-end justify-between">
-                    <div className="text-lg text-secondary font-bold">{product.price}</div>
+                <div className="w-1/4 flex flex-col items-end ">
+                    <div className="text-lg text-secondary font-bold">${product.price}</div>
                     <button className="transition duration-170 hover:scale-105 active:scale-75" onClick={addToCart}>
                         <img className=" h-12 bg-accent p-2 rounded-full " src={AddCart}/>
                     </button>

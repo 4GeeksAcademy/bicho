@@ -7,7 +7,10 @@ import drinkIcon from "@/assets/icons/drink.svg"
 import forkIcon from "@/assets/icons/fork.svg"
 import snack from "@/assets/icons/snack.svg"
 import MenuItem from "../components/Food/MenuItem";
-import BlueLine from "../components/Food/BlueLine";
+import food from "@/lists/food.js"
+import drinks from "@/lists/drinks.js"
+import combos from "@/lists/combos.js"
+import promos from "@/lists/promos.js"
 
 
 export default function Food(){
@@ -21,14 +24,10 @@ export default function Food(){
             </div> 
             <div className="p-2 flex justify-center my-5">
                 <Carousel  className="max-w-4xl">
-                    <PromoCard/>
-                    <PromoCard/>
-                    <PromoCard/>
-                    <PromoCard/>
-                    <PromoCard/>
-                    <PromoCard/>
-                    <PromoCard/>
-                    <PromoCard/>
+                    {promos.map((promo)=>(
+                        <PromoCard key={promo.id} promo={promo}/>
+                    ))}
+
                 </Carousel>
             </div>
         </div>
@@ -39,31 +38,37 @@ export default function Food(){
             <div className={`${!isMobile ? "flex justify-around" :""}`}>
 
                 <MenuCard 
-                icon={drinkIcon}
-                iconSize="w-10 h-10"
-                title="Bebidas"
-                >
-                    <MenuItem name="kk" price="20"/>
-                    <BlueLine/>
-                </MenuCard>
-               
-
-                <MenuCard 
                 icon={snack}
                 iconSize="w-7 h-7"
                 title="Alimentos"
                 >
-                    <MenuItem name="kk" price="20"/>
-                    <BlueLine/>
+                    {food.map((food)=>(
+                        <MenuItem key={food.id} item={food}/>
+                    ))}
                 </MenuCard>
+
+                <MenuCard 
+                icon={drinkIcon}
+                iconSize="w-10 h-10"
+                title="Bebidas"
+                >
+                    {drinks.map((drink)=>(
+                        <MenuItem key={drink.id} item={drink}/>
+                    ))}
+                    
+                </MenuCard>
+
+
 
                 <MenuCard 
                 icon={forkIcon}
                 iconSize="w-7 h-7"
                 title="Combos"
                 >
-                    <MenuItem name="kk" price="20"/>
-                    <BlueLine/>
+                    {combos.map((combo)=>(
+                        <MenuItem key={combo.id} item={combo}/>
+                    ))}
+                
                 </MenuCard>
             </div>
             

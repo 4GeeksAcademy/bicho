@@ -19,7 +19,7 @@ export default function MenuMobile(){
             <div className="m-3">
             <div className="m-2 my-5 flex flex-row justify-between">
                 <img className="w-6 h-6" src={pokeIcon}/>
-                <div className="text-secondary px-3 font-bold">Menú</div>
+                <div className="text-secondary px-3 font-bold">El bichokun</div>
                 <img className="w-6 h-6" src={pokeIcon}/>
             </div>
             <Link to="/" onClick={()=>setOpen(false)} >

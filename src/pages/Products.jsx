@@ -2,7 +2,8 @@ import Carousel from "../components/Carousel"
 import ProductCard from "../components/Products/ProductCard"
 import { screenSize } from "../hooks/screenSize"
 import whatsIcon from "@/assets/icons/whatsIcon.png"
-import products from "@/products.js"
+import products from "@/lists/products.js"
+
 
 
 export default function Products(){
@@ -32,7 +33,7 @@ export default function Products(){
     
     return(
         <div >
-            <div className="flex flex-col items-center justify-center py-3 min-h-[30vh]">
+            <div className="flex flex-col items-center justify-center  py-3 min-h-[30vh]">
                 <div className="text-secondary font-bold text-xl p-2">Pregunta por los próximos lanzamientos</div> 
                 <div className="flex items-center">
                     <div className="text-secondary font-bold text-md pr-3">Únete a nuestra comunidad de WhatsApp</div>
@@ -66,7 +67,7 @@ export default function Products(){
                 }
             </div>
             <div className={`bg-linear-to-r from-primary to-accent p-3 min-h-[60vh]`}>
-                <div className="font-bold text-warning text-3xl my-3">Conoce nuestros productos imprecindibles </div>
+                <div className={`${isMobile ? "font-bold text-warning text-center my-4" :"font-bold text-warning text-center text-3xl my-4"}`}>Conoce nuestros productos imprecindibles </div>
                 
                 <div className={` grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center w-full`}>                 
                     {products.map((product)=>(
