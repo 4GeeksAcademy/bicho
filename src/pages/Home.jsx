@@ -6,6 +6,8 @@ import { screenSize } from "../hooks/screenSize.jsx";
 import TournamentCard from "../components/Home/TournamentCard.jsx";
 
 
+
+
 export const Home = () => {
 
   const {store, dispatch} =useGlobalReducer()
@@ -85,10 +87,11 @@ export const Home = () => {
 					location="Friki Plaza"
 					/>
 				</div>	
+
 				
 			</div>
 			
-
+	
 		</div>
 	);
 }; 
