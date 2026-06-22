@@ -18,6 +18,12 @@ export default function Food(){
     return (
     <div>
         <div>
+            <div className={`${isMobile ? " font-semi-bold text-xl py-3" : "  font-semi-bold text-3xl py-3" } text-secondary text-center`}>
+              Deleitate con un snack mientras te diviertes!
+            </div>
+            <div className="text-secondary text-center py-3">
+              (Alimentos disponibles solo en sucursal Palenque)
+            </div>
             <div className="flex flex-row justify-center py-3">
                 <img className="w-8 h-8" src={percent} />
                 <div className="text-secondary font-bold text-3xl">Promociones</div>
@@ -63,7 +69,7 @@ export default function Food(){
                 <MenuCard 
                 icon={forkIcon}
                 iconSize="w-7 h-7"
-                title="Combos"
+                title="Combos (incluyen bebida)"
                 >
                     {combos.map((combo)=>(
                         <MenuItem key={combo.id} item={combo}/>

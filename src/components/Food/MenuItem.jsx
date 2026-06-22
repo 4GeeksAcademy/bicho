@@ -5,6 +5,7 @@ export default function MenuItem({item}){
             <div className="text-secondary w-1/2">{item.name}</div>
             <div className="text-primary w-1/2 flex justify-end font-semibold">${item.price} </div>
             </div>
+            <div className="text-gray-400 text-xs">{item.description} </div>
              <div className="border border-accent"/>
 
         </div>
